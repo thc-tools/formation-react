@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Formation ReactJS</title>
+
+    <meta name="description" content="Présentation stage de fin d'études">
+    <meta name="author" content="Stanislas Bernard">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/blood.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+    .reveal h1 {
+        font-size: 2.5em;
+    }
+    .reveal h2 {
+        font-size: 1.5em;
+    }
+    .reveal h3 {
+        font-size: 1.2em;
+    }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background='licorn.jpg'>
+                <h1>Formation ReactJS</h1>
+                <h3>Ou le plus beau jour du reste de ta vie</h3>
+                <p>
+                    <small>Team Focus, le 17/11/2015</small>
+                </p>
+            </section>
+            <section data-background='wall11.jpg'>
+                <section>
+                    <h2>C'est quoi React JS ?</h2>
+                    <p>ReactJS, c'est un framework JS, pour bâtir des interfaces cools et modulaires.</p>
+                    <p>Pour ceux qui connaissent AngularJS, EmberJS, c'est le même but, mais en fait c'est mieux.</p>
+                </section>
+                <section>
+                    <h2>Pourquoi mieux ? T'es payé par Facebook pour dire ça ?</h2>
+                    <p>La grande force de React, c'est le DOM virtuel.</p>
+                    <p>React maintient en permanence une copie rapide du DOM, fait toutes ses mises à jour en fond, et ne met à jour le DOM qu'au besoin.</p>
+                    <p>L'intérêt ? Un gain en performance, et surtout un découplage de la logique composants du DOM, ce qui pousse à des trucs coolos genre React Native <3</p>
+                </section>
+                <section>
+                    <h2>Pourquoi tu nous parles de modulaire ?</h2>
+                    <p>ReactJS a une approche composant. Un composant, c'est une pièce du puzzle qui crée l'interface utilisateur.</p>
+                    <p>Faire du React, c'est faire des composants, qu'on interconnecte entre eux.</p>
+                    <p>Un peu comme faire un programme en Java, tu écris des classes qui fonctionnent ensemble.</p>
+                    <p><small>Ah non en fait, en Java t'as aussi besoin de XML. Et d'un serveur. Et d'une JVM. Et y'a pas de classes en JS. Et t'as pas besoin d'Eclipse...</small></p>
+                </section>
+                <section>
+                    <h2>Qu'est-ce que tu entends par "Composant" ?</h2>
+                    <p>Un composant React, c'est :</p>
+                    <ul>
+                        <li>Une mécanique interne écrite en JS</li>
+                        <li>Un résultat sous forme de HTML, écrit grâce au JSX</li>
+                        <li>Un style associé, sous forme de CSS</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>JSX ? C'est une insulte ?</h2>
+                    <p>Le JSX, c'est un mélange de JS et de HTML. C'est employé par React pour écrire le rendu HTML des composants.</p>
+                    <pre>
+                        <code class='javascript'>
+const name = 'Lopez Joe';
+return (
+    <div>
+        <b>{name.capitalize()}</b>
+    </div>
+);
+                            </code>
+                        </pre>
+                        <p>donnera</p>
+                        <pre>
+                            <code class='html'>
+<div>
+    <b>LOPEZ JOE</b>
+</div>
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section data-background='wall2.jpg'>
+                    <section>
+                        <h1>Comment ça marche ?<h1>
+                    </section>
+                    <section>
+                        <h2>Une appli en React, c'est une arborescence de composants</h2>
+                        <pre>
+                            <code class="html">
+&lt;Parent>
+    &lt;ListeDeTrucs />
+    &lt;ChampDeSaisie />
+    &lt;CentreDeNotifs />
+&lt;/Parent>
+
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>On code comment un composant ?</h2>
+                        <p>Un composant React, ça ressemble à ça :</p>
+                        <pre>
+                            <code class="javascript">
+const MyComponent = React.createClass({
+    mixins: [firstMixin, secondMixin],
+    _privateMethod() {
+        // Some fancy stuff
+    },
+    publicMethod() {
+        // Even fancier stuff
+    },
+    render() {
+        const {name} = this.props;
+        return (
+            <div>
+                <p>My content</p>
+                <p>My name is {name}</p>
+            </div>
+        );
+    }
+});
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>Mixins ? Encore un nouvel outil de Focus ?</h2>
+                        <p>Que nenni ! Un mixin, c'est un bout de composant partagé entre plusieurs.</p>
+                        <p>C'est juste un objet JS, dont le composant va hériter pour l'intégrer à son prototype.</p>
+                    </section>
+                    <section>
+                        <h2>Et ils se parlent comment tes composants ?</h2>
+                        <p>Avec les <b>props</b> !</p>
+                        <pre>
+                            <code class="javascript">
+const Parent = React.createClass({
+    render() {
+        return &lt;Child myProp='coucou'/>;
+    }
+});
+
+const Child = React.createClass({
+    render() {
+        return <div>{this.props.myProp}, ça va ?</div>
+    }
+});
+// Ce qui renvoie <div>coucou, ça va ?</div>
+                            </code>
+                        </pre>
+                        <p>Cool n'est-ce pas ?</p>
+                    </section>
+                    <section>
+                        <h2>Mais quid des valeurs qui bougent ?</h2>
+                        <p>Pour les valeurs que l'on veut faire varier, on utilise le <b>state</b> !</p>
+                        <pre>
+                            <code class="javascript">
+const Counter = React.createClass({
+    getInitialState() {
+        return {count: 0};
+    },
+    componentDidMount() {
+        setInterval(() => {
+            const {count} = this.state;
+            this.setState({count: count + 1});
+        }, 1000);
+    },
+    render() {
+        return (
+            &lt;div>
+                The count is now {this.state.count}.
+            &lt;/div>
+        );
+    }
+});
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <h2>On recapitule !</h2>
+                        <ul>
+                            <li>Les composants constituent un arbre hiérarchique, avec des parents et des enfants</li>
+                            <li>Les composants se passent des valeurs entre enfants et parents à travers les <b>props</b></li>
+                            <li>L'état de l'interface à un instant <i>t</i> (le contenu d'un champ de saisie, les données récupérées depuis le serveur, ...) est porté par le <b>state</b></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Ca roule ma poule.<h2>
+                        <h3>Pourquoi on met pas tout dans le state alors ?</h3>
+                        <p>Excellente question, j'attendais qu'on me la pose.</p>
+                        <p>Le danger du state, c'est qu'on peut le changer à tout moment. Même quand on veut pas. Surtout quand on veut pas.</p>
+                    </section>
+                    <section>
+                        <h2>Ok mais je choisis comment du coup ?</h2>
+                        <p>C'est très simple ! (en vrai pas tant.)</p>
+                        <ul>
+                            <li>Toute donnée fournie à un composant, dont il n'est pas responsable, est portée par ses props.</li>
+                            <li><b>Le state n'est employé que pour refléter l'état d'un composant dans son interaction avec l'utilisateur.</b></li>
+                            <li>Par exemple, un composant de liste donne les données à ses enfants par des props, mais les enfants ne doivent pas modifier ces données. Ils n'en sont pas responsables.</li>
+                            <li>Au contraire, un composant avec un champ de saisie est responsable de la valeur du champ, et doit la porter dans son state.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section data-background='wall3.jpg'>
+                    <section>
+                        <h1>Le cycle de vie d'un composant</h1>
+                    </section>
+                    <section>
+                        <img src='lifecycle.png'/>
+                    </section>
+                    <section>
+                        <h3>Trop cools, on est chauds comme des baraques à frites, on passe à la pratique ?</h3>
+                        <p>C'est tipar !</p>
+                    </section>
+                </section>
+                <section data-background='wall4.jpg'>
+                    <section>
+                        <h1>On va se faire une p'tite liste de demande au père Noël !</h1>
+                        <p>Vla l'appli de ouf, j'en peux plus d'attendre de savoir comment la faire, c'est trop utile c'est bientôt Noël en plus, purée ils sont trop forts j'adore ces types.</p>
+                    </section>
+                    <section>
+                        <h2>On veut obtenir quoi ?</h2>
+                        <ul>
+                            <li>Une appli écrite en React pur (Captain Obvious)</li>
+                            <li>Avoir une liste de souhaits</li>
+                            <li>Pouvoir ajouter des souhaits</li>
+                            <li>Pouvoir supprimer des souhaits</li>
+                            <li>Intégrer les best practices en termes de design</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Tout ça en quelques dizaines de minutes ? Tu nous prends pour des jambons ?</h2>
+                        <p>Du calme mes doux agneaux, j'ai préparé tout ce qui est design.</p>
+                    </section>
+                    <section>
+                        <h1>On y va !</h1>
+                        <a href='http://bit.ly/1MhWUiE' target='blank' style="color: cyan">http://bit.ly/1MhWUiE</a>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+        <script src="node_modules/reveal.js/js/reveal.js"></script>
+
+        <script>
+
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            viewDistance: 3,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
+            ]
+        });
+
+        </script>
+    </body>
+    </html>
