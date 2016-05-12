@@ -153,9 +153,11 @@ const MyComponent = React.createClass({
                         </pre>
                     </section>
                     <section>
-                        <h2>Mixins ? Encore un nouvel outil de Focus ?</h2>
+                        <h3>Mixins ? Encore un nouvel outil de Focus ?</h3>
                         <p>Que nenni ! Un mixin, c'est un bout de composant partagé entre plusieurs.</p>
                         <p>C'est juste un objet JS, dont le composant va hériter pour l'intégrer à son prototype.</p>
+                        <h2>Encore mieux : L'encapsulation de composants</h2>
+                        <p>Une arborescence de composants pour une meilleure flexibilité</p>
                     </section>
                     <section>
                         <h2>Et ils se parlent comment tes composants ?</h2>
@@ -218,6 +220,7 @@ const Counter = React.createClass({
                         <p>Excellente question, j'attendais qu'on me la pose.</p>
                         <p>Le danger du state, c'est qu'on peut le changer à tout moment. Même quand on veut pas. Surtout quand on veut pas.</p>
                     </section>
+
                     <section>
                         <h2>Ok mais je choisis comment du coup ?</h2>
                         <p>C'est très simple ! (en vrai pas tant.)</p>
@@ -227,6 +230,23 @@ const Counter = React.createClass({
                             <li>Par exemple, un composant de liste donne les données à ses enfants par des props, mais les enfants ne doivent pas modifier ces données. Ils n'en sont pas responsables.</li>
                             <li>Au contraire, un composant avec un champ de saisie est responsable de la valeur du champ, et doit la porter dans son state.</li>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>StateLess Component</h2>
+                        <p>Avec eux, il ne faut pas hésiter ! </p>
+                        <pre>
+                            <code class="javascript">
+  const Profile = ({image, bio}) => {
+    return (
+      &lt;div>
+          <img src={image} />
+          <div>{bio}</div>
+      &lt;/div>
+
+    )
+  };
+                            </code>
+                        </pre>
                     </section>
                 </section>
                 <section data-background='wall3.jpg'>
@@ -241,10 +261,10 @@ const Counter = React.createClass({
                         <p>C'est tipar !</p>
                     </section>
                 </section>
-                <section data-background='wall4.jpg'>
+                <section data-background='wall2.jpg'>
                     <section>
                         <h1>On va se faire une p'tite todo list !</h1>
-                        <p>Vla l'appli de ouf, j'en peux plus d'attendre de savoir comment la faire, c'est trop utile en plus, purée ils sont trop forts j'adore ces types.</p>
+                        <p>Vla l'appli de ouf, j'en peux plus d'attendre de savoir comment la faire, c'est trop utile en plus, purée ils sont trop forts j'adore ces gens.</p>
                         <p><small>Nous aussi on vous adore</small></p>
                     </section>
                     <section>
