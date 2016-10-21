@@ -256,6 +256,90 @@ const Counter = React.createClass({
                             <li>Sans mixins et sans cylce de vie ==> Pures Fonctions</li>
                         </ul>
                     </section>
+					                    <section>
+                        <h2>React.createClass</h2>
+                        <p>Pour les mixins !!!</p>
+                        <pre>
+                            <code class="javascript">
+const Hello = React.createClass({
+  mixins: [firstMixin, secondMixin],
+  getInitialState() {
+    return {
+      hello: "world"
+    };
+  },
+  componentWillReceiveProps(nextProps){
+	console.log(this.props); 
+	console.log(nextProps);
+  },
+  handleInputChange({target: {value}) {
+    this.setState({
+      hello: value
+    });
+  },
+  render() {
+	const {hello} = this.state;
+    return (
+      &lt;div>
+        &lt;input value={hello} onChange={this.handleInputChange} />
+        &lt;div>hello {hello}</div>
+      &lt;/div>
+    );
+  }
+});
+                            </code>
+                        </pre>
+                    </section>
+					                    <section>
+                        <h2>Class ES6</h2>
+                        <p>extends Component (voir le PureComponent)</p>
+                        <pre>
+                            <code class="javascript">
+class TodoItem extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      editing: false
+    };
+  }
+
+  handleDoubleClick() {
+    this.setState({ editing: true });
+  }
+  render (){
+	const {editing} = this.state;
+	return (
+		&lt;div>Ouuuuuuuah un composant qui a un état : {editing}</div>
+	)
+  }
+}
+                            </code>
+                        </pre>
+                    </section>
+					                    <section>
+                        <h2>StateLess Component</h2>
+                        <p>Avec eux, il ne faut pas hésiter ! </p>
+                        <pre>
+                            <code class="javascript">
+const Personne = () => {
+    return (
+      &lt;Profile nom={'Silvio'} bio={'BlaBlaBlaBlaBlaBlaBla'}/>
+
+    )
+  };					
+							
+  const Profile = ({nom, bio}) => {
+    return (
+      &lt;div>
+          <span>nom</span>
+          <div>{bio}</div>
+      &lt;/div>
+
+    )
+  };
+                            </code>
+                        </pre>
+                    </section>
                 </section>
                 <section data-background='wall3.jpg'>
                     <section>
