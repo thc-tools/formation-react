@@ -62,20 +62,19 @@
             <section data-background='wall11.jpg'>
                 <section>
                     <h2>C'est quoi React JS ?</h2>
-                    <p>ReactJS, c'est un framework JS, pour bâtir des interfaces cools et modulaires.</p>
-                    <p>Pour ceux qui connaissent AngularJS, EmberJS, c'est le même but, mais en fait c'est mieux.</p>
+                    <p>ReactJS est un framework JS, pour bâtir des interfaces agréables et modulaires.</p>
+                    <p>Il s'inscrit dans la famille des framework Js tels que AngularJS ou EmberJS.</p>
                 </section>
                 <section>
-                    <h2>Pourquoi mieux ? T'es payé par Facebook pour dire ça ?</h2>
                     <p>La grande force de React, c'est le DOM virtuel.</p>
                     <p>React maintient en permanence une copie rapide du DOM, fait toutes ses mises à jour en fond, et ne met à jour le DOM qu'au besoin.</p>
-                    <p>L'intérêt ? Un gain en performance, et surtout un découplage de la logique composants du DOM, ce qui pousse à des trucs coolos genre React Native <3</p>
+                    <p>L'intérêt ? Un gain en performance, et surtout un découplage de la logique composants du DOM</p>
                 </section>
                 <section>
-                    <h2>Pourquoi tu nous parles de modulaire ?</h2>
+                    <h2>Pourquoi modulaire ?</h2>
                     <p>ReactJS a une approche composant. Un composant, c'est une pièce du puzzle qui crée l'interface utilisateur.</p>
-                    <p>Faire du React, c'est faire des composants, qu'on interconnecte entre eux.</p>
-                    <p>Un peu comme faire un programme en Java, tu écris des classes qui fonctionnent ensemble.</p>
+                    <p>Faire du React, c'est fabriquer des composants, qu'on interconnecte entre eux.</p>
+                    <p>Il s'agit donc de la Programmation Orientée Composant.</p>
                 </section>
                 <section>
                     <h2>Qu'est-ce que tu entends par "Composant" ?</h2>
@@ -87,8 +86,8 @@
                     </ul>
                 </section>
                 <section>
-                    <h2>JSX ? C'est une insulte ?</h2>
-                    <p>Le JSX, c'est un mélange de JS et de HTML. C'est employé par React pour écrire le rendu HTML des composants.</p>
+                    <h2>JSX ?</h2>
+                    <p>Le JSX est un mélange de JS et de HTML. Il est employé par React pour écrire le rendu HTML des composants.</p>
                     <pre>
                         <code class='javascript'>
 const name = 'Lopez Joe';
@@ -153,14 +152,14 @@ const MyComponent = React.createClass({
                         </pre>
                     </section>
                     <section>
-                        <h3>Mixins ? Encore un nouvel outil de Focus ?</h3>
-                        <p>Que nenni ! Un mixin, c'est un bout de composant partagé entre plusieurs.</p>
-                        <p>C'est juste un objet JS, dont le composant va hériter pour l'intégrer à son prototype.</p>
+                        <h3>Qu'est ce que les mixins ?</h3>
+                        <p>Un mixin est un bout de code partagé entre plusieurs composants</p>
+                        <p>Il ne s'agit que d'un objet JS, dont le composant va hériter pour l'intégrer à son prototype.</p>
                         <h2>Encore mieux : L'encapsulation de composants</h2>
                         <p>Une arborescence de composants pour une meilleure flexibilité</p>
                     </section>
                     <section>
-                        <h2>Et ils se parlent comment tes composants ?</h2>
+                        <h2>Comment communiquent les composants ?</h2>
                         <p>Avec les <b>props</b> !</p>
                         <pre>
                             <code class="javascript">
@@ -215,15 +214,12 @@ const Counter = React.createClass({
                         </ul>
                     </section>
                     <section>
-                        <h2>Ca roule ma poule.<h2>
                         <h3>Pourquoi on met pas tout dans le state alors ?</h3>
-                        <p>Excellente question, j'attendais qu'on me la pose.</p>
-                        <p>Le danger du state, c'est qu'on peut le changer à tout moment. Même quand on veut pas. Surtout quand on veut pas.</p>
+                        <p>Le danger du state, c'est qu'on peut le changer à tout moment. Même quand on veut pas.</p>
                     </section>
 
                     <section>
                         <h2>Ok mais je choisis comment du coup ?</h2>
-                        <p>C'est très simple ! (en vrai pas tant.)</p>
                         <ul>
                             <li>Toute donnée fournie à un composant, dont il n'est pas responsable, est portée par ses props.</li>
                             <li><b>Le state n'est employé que pour refléter l'état d'un composant dans son interaction avec l'utilisateur.</b></li>
@@ -309,7 +305,7 @@ class TodoItem extends Component {
   render (){
 	const {editing} = this.state;
 	return (
-		&lt;div>Ouuuuuuuah un composant qui a un état : {editing}</div>
+		&lt;div>Un composant qui a un état : {editing}</div>
 	)
   }
 }
@@ -348,30 +344,20 @@ const Personne = () => {
                     <section>
                         <img src='lifecycle.png'/>
                     </section>
-                    <section>
-                        <h3>Trop cools, on est chauds comme des baraques à frites, on passe à la pratique ?</h3>
-                        <p>C'est tipar !</p>
-                    </section>
                 </section>
                 <section data-background='wall2.jpg'>
                     <section>
-                        <h1>On va se faire une p'tite todo list !</h1>
-                        <p>Vla l'appli de ouf, j'en peux plus d'attendre de savoir comment la faire, c'est trop utile en plus, purée ils sont trop forts j'adore ces gens.</p>
-                        <p><small>Nous aussi on vous adore</small></p>
-                    </section>
+                        <h1>Il s'agit de créer une todo list !</h1>
+                   </section>
                     <section>
                         <h2>On veut obtenir quoi ?</h2>
                         <ul>
-                            <li>Une appli écrite en React pur (Captain Obvious)</li>
-                            <li>Avoir une liste de trucs à faire</li>
-                            <li>Pouvoir ajouter des trucs à faire</li>
-                            <li>Pouvoir supprimer des trucs à faire</li>
-                            <li>Pouvoir filtrer par trucs à faire faits ou pas faits</li>
+                            <li>Une appli écrite en React pur</li>
+                            <li>Avoir une liste de choses à faire</li>
+                            <li>Pouvoir ajouter des choses à faire</li>
+                            <li>Pouvoir supprimer des choses à faire</li>
+                            <li>Pouvoir filtrer par choses à faire faits ou pas faits</li>
                         </ul>
-                    </section>
-                    <section>
-                        <h2>Tout ça en quelques dizaines de minutes ? Tu nous prends pour des jambons ?</h2>
-                        <p>Du calme mes doux agneaux, tout va bien se passer.</p>
                     </section>
                     <section>
                         <h1>On y va !</h1>
