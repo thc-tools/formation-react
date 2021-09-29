@@ -1,409 +1,1404 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-<head>
-    <meta charset="utf-8">
+        <title>Formation JS</title>
 
-    <title>Formation ReactJS</title>
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/black.css" />
+        <link rel="stylesheet" href="dist/custom.css" />
 
-    <meta name="description" content="Formation ReactJS">
-    <meta name="author" content="focus@kleegroup.com">
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/blood.css" id="theme">
-
-    <!-- Code syntax highlighting -->
-    <link rel="stylesheet" href="node_modules/reveal.js/lib/css/zenburn.css">
-
-    <!-- Printing and PDF exports -->
-    <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <style>
-    .reveal h1 {
-        font-size: 2.5em;
-    }
-    .reveal h2 {
-        font-size: 1.5em;
-    }
-    .reveal h3 {
-        font-size: 1.2em;
-    }
-    </style>
-
-    <!--[if lt IE 9]>
-    <script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-    <div class="reveal">
-
-        <!-- Any section element inside of this container is displayed as a slide -->
-        <div class="slides">
-            <section data-background='licorn.jpg'>
-                <h1>Formation ReactJS</h1>
-                <h3>Ou le plus beau jour du reste de ta vie</h3>
-                <p>
-                    <small>Team Focus, le 22/01/2016</small>
-                </p>
-                <p><small><i>http://bit.ly/1MjtHDX</i></small></p>
-            </section>
-            <section data-background='wall11.jpg'>
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
                 <section>
-                    <h2>C'est quoi React JS ?</h2>
-                    <p>ReactJS est un framework JS, pour bâtir des interfaces agréables et modulaires.</p>
-                    <p>Il s'inscrit dans la famille des framework Js tels que AngularJS ou EmberJS.</p>
+                    <h1>Formation React</h1>
+                    <h2>- Généralités -</h2>
                 </section>
+
                 <section>
-                    <p>La grande force de React, c'est le DOM virtuel.</p>
-                    <p>React maintient en permanence une copie rapide du DOM, fait toutes ses mises à jour en fond, et ne met à jour le DOM qu'au besoin.</p>
-                    <p>L'intérêt ? Un gain en performance, et surtout un découplage de la logique composants du DOM</p>
-                </section>
-                <section>
-                    <h2>Pourquoi modulaire ?</h2>
-                    <p>ReactJS a une approche composant. Un composant, c'est une pièce du puzzle qui crée l'interface utilisateur.</p>
-                    <p>Faire du React, c'est fabriquer des composants, qu'on interconnecte entre eux.</p>
-                    <p>Il s'agit donc de la Programmation Orientée Composant.</p>
-                </section>
-                <section>
-                    <h2>Qu'est-ce que tu entends par "Composant" ?</h2>
-                    <p>Un composant React, c'est :</p>
-                    <ul>
-                        <li>Une mécanique interne écrite en JS</li>
-                        <li>Un résultat sous forme de HTML, écrit grâce au JSX</li>
-                        <li>Un style associé, sous forme de CSS</li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>JSX ?</h2>
-                    <p>Le JSX est un mélange de JS et de HTML. Il est employé par React pour écrire le rendu HTML des composants.</p>
-                    <pre>
-                        <code class='javascript'>
-const name = 'Lopez Joe';
-return (
-    <div>
-        <b>{name.capitalize()}</b>
-    </div>
-);
-                            </code>
-                        </pre>
-                        <p>donnera</p>
-                        <pre>
-                            <code class='html'>
-<div>
-    <b>LOPEZ JOE</b>
-</div>
-                            </code>
-                        </pre>
+                    <section>
+                        <h1>- Présentation -</h1>
+                    </section>
+
+                    <section>
+                        <h3>React</h3>
+                        <p>
+                            React est un framework JS, souvent mise en compétition avec d'autres frameworks (tels
+                            Angular, Vue.js, et toute une flopée qui naissent et meurent aussi vite qu'ils sont
+                            apparus), permettant de développer des applications. React se limite principalement à
+                            l'Interface Utilisateur, ce qui en fait un framework plus léger que certains de ses
+                            concurrents.​
+                        </p>
+                        <p>React est un projet open source piloté par Facebook.​</p>
+                    </section>
+
+                    <section>
+                        <h3>Pourquoi utiliser React</h3>
+                        <p>
+                            La pérennité, le support continu des frameworks qu'on utilise est important. Selon ce
+                            critère, on peut réduire à 3 les frameworks JS front-end utilisables : React, Angular et
+                            Vue.JS.​
+                        </p>
+                        <ul>
+                            <li>
+                                Angular jouit de moins de prestige que ses concurrents : des changements de versions
+                                parfois incompatibles avec la précédente l'ont rendu moins apprécié par les
+                                développeurs.​
+                            </li>
+                            <li>
+                                Vue.JS est le petit poucet des trois : arrivé plus tard mais étant très apprécié par les
+                                développeurs, il fait également l'objet d'une filière à Klee.​
+                            </li>
+                            <li>
+                                React a été choisi sur les frameworks Focus au sein de Klee pour son approche composant
+                                et sa facilité (toute relative) d'utilisation.​
+                            </li>
+                        </ul>
                     </section>
                 </section>
-                <section data-background='wall2.jpg'>
-                    <section>
-                        <h1>Comment ça marche ?<h1>
-                    </section>
-                    <section>
-                        <h2>Une appli en React, c'est une arborescence de composants</h2>
-                        <pre>
-                            <code class="html">
-&lt;Parent>
-    &lt;ListeDeTrucs />
-    &lt;ChampDeSaisie />
-    &lt;CentreDeNotifs />
-&lt;/Parent>
 
-                            </code>
-                        </pre>
-                    </section>
+                <section>
                     <section>
-                        <h2>On code comment un composant ?</h2>
-                        <p>Un composant React, ça ressemble à ça :</p>
-                        <pre>
-                            <code class="javascript">
-const MyComponent = React.createClass({
-    mixins: [firstMixin, secondMixin],
-    _privateMethod() {
-        // Some fancy stuff
-    },
-    publicMethod() {
-        // Even fancier stuff
-    },
-    render() {
-        const {name} = this.props;
-        return (
-            <div>
-                <p>My content</p>
-                <p>My name is {name}</p>
-            </div>
-        );
-    }
-});
-                            </code>
-                        </pre>
+                        <h1>- DOM Vitrtuel -</h1>
                     </section>
-                    <section>
-                        <h3>Qu'est ce que les mixins ?</h3>
-                        <p>Un mixin est un bout de code partagé entre plusieurs composants</p>
-                        <p>Il ne s'agit que d'un objet JS, dont le composant va hériter pour l'intégrer à son prototype.</p>
-                        <h2>Encore mieux : L'encapsulation de composants</h2>
-                        <p>Une arborescence de composants pour une meilleure flexibilité</p>
-                    </section>
-                    <section>
-                        <h2>Comment communiquent les composants ?</h2>
-                        <p>Avec les <b>props</b> !</p>
-                        <pre>
-                            <code class="javascript">
-const Parent = React.createClass({
-    render() {
-        return &lt;Child myProp='coucou'/>;
-    }
-});
 
-const Child = React.createClass({
-    render() {
-        return <div>{this.props.myProp}, ça va ?</div>
-    }
-});
-// Ce qui renvoie <div>coucou, ça va ?</div>
-                            </code>
-                        </pre>
-                        <p>Cool n'est-ce pas ?</p>
-                    </section>
                     <section>
-                        <h2>Mais quid des valeurs qui bougent ?</h2>
-                        <p>Pour les valeurs que l'on veut faire varier, on utilise le <b>state</b> !</p>
+                        <h3>DOM virtuel</h3>
+                        <img src="/img/virtual_dom.png" alt="react lifecycle" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>- Logique composant -</h1>
+                    </section>
+
+                    <section>
+                        <h3>Composant</h3>
+                        <p>
+                            React, ainsi que nombre de ses concurrents, utilise une approche basée sur les composants
+                            pour la création de pages web.
+                        </p>
+                        <p>
+                            Le principe est non plus de rendre une page d'un seul morceau, constituée d'un bout de code
+                            monolithique (divisé en structure, le HTML, style, le CSS et comportement, le JS), mais de
+                            diviser cette page en composants qui seront utilisés et réutilisés pour construire la page
+                            finale.
+                        </p>
+                        <p>
+                            Les composants React sont des classes Javascript autonomes disposant de leur propre rendu.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Composant</h3>
+                        <p>
+                            Ils disposent d'une API bien définie et contiennent tous les éléments définissant leur
+                            structure, leur style et leur comportement, définis dans une syntaxe appelée JSX, pour
+                            JavaScript Syntax eXtension.
+                        </p>
+                        <p>
+                            Il est possible ensuite de composer ces briques en une arborescence de composants dont le
+                            rendu final sera la page souhaitée.
+                        </p>
                         <pre>
-                            <code class="javascript">
-const Counter = React.createClass({
-    getInitialState() {
-        return {count: 0};
-    },
-    componentDidMount() {
-        setInterval(() => {
-            const {count} = this.state;
-            this.setState({count: count + 1});
-        }, 1000);
-    },
-    render() {
-        return (
-            &lt;div>
-                The count is now {this.state.count}.
-            &lt;/div>
-        );
-    }
-});
+                            <code class="html" data-trim>
+                                <script type="text/template">
+                                    <Parent>
+                                        <ListeDeTrucs />
+                                        <ChampDeSaisie />
+                                        <CentreDeNotifs />
+                                    </Parent>                                    
+                                </script>
                             </code>
                         </pre>
                     </section>
+                </section>
+
+                <section>
                     <section>
-                        <h2>On recapitule !</h2>
+                        <h1>- Le JSX -</h1>
+                    </section>
+
+                    <section>
+                        <h3>Le JSX, c'est quoi ?</h3>
+                        <p>
+                            Le JSX est un mélange de JS et de HTML, permettant de rendre les éléments du DOM qui
+                            figureront sur la page.
+                        </p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class ShoppingList extends React.Component {
+                                        render() {
+                                           return (
+                                                <div className="shopping-list">
+                                                    <h1>Shopping List for {this.props.name}</h1>
+                                                    <ul>
+                                                        <li>Instagram</li>
+                                                        <li>WhatsApp</li>
+                                                        <li>Oculus</li>
+                                                    </ul>
+                                                </div>
+                                            );
+                                        }
+                                    }
+                                       
+                                    // Example usage: <ShoppingList name="Mark" />                                      
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Le JSX, c'est quoi ?</h3>
+                        <p>
+                            On peut voir ici un composant simple créé en utilisant la syntaxe ES6. La méthode de rendu
+                            contient du HTML et, entre accolades, des éléments javascript (ici, this.props.name, une
+                            propriété name étant fournie en entrée au composant).
+                        </p>
+
+                        <p>Attention, les attributs HTML dont le nom est réservé en JS sont renommés en JSX :</p>
+                        <ul>
+                            <li>className pour class (ex: &lt;div className="joli-css"/&gt;)</li>
+                            <li>
+                                htmlFor pour for (ex: &lt;input type="checkbox" id="id1"/&gt;&lt;label
+                                htmlFor="id1"&gt;Label&lt;/label&gt;)
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Le JSX, c'est quoi ?</h3>
+                        <p>
+                            Un composant React doit obligatoirement implémenter la méthode render(). Celle-ci doit
+                            retourner un unique nœud du DOM.
+                        </p>
+                        <p>
+                            Il n'est pas possible de renvoyer autre chose qu'un nœud unique du DOM sur les versions de
+                            React < 16.0.
+                        </p>
+                        <p>
+                            Le module concernant les nouveautés de React >= 16.0 détaillera l'utilisation de
+                            React.Fragment.
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>- Props & state -</h1>
+                    </section>
+
+                    <section>
+                        <h3>Présentation</h3>
+                        <p>
+                            Un des principes importants est la communication entre les composants de React. Un composant
+                            parent met à disposition les données par l'utilisation de props.
+                        </p>
+                        <p>
+                            Les enfants gèrent leur propre état au sein du state, l'état applicatif du composant. Il
+                            n'est pas obligatoire d'avoir un state ! Un composant ayant pour unique vocation d'afficher
+                            des données ne nécessite pas de state.
+                        </p>
+                        <p>
+                            Dans le cas où l'état d'un enfant change, il peut être nécessaire de remonter les
+                            changements au parent, ce qui se fait par l'usage de props permettant la mise à jour du
+                            parent.
+                        </p>
+                        <p>
+                            <strong>En règle générale, les données descendent, l'état remonte.</strong>
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Exemple</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class Board extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                            this.state = {
+                                                squares: Array(9).fill(null),
+                                            };
+                                        }
+                                       
+                                        handleClick(i) {
+                                            const squares = this.state.squares.slice();
+                                            squares[i] = 'X';
+                                            this.setState({squares: squares});
+                                        }
+                                       
+                                        renderSquare(i) {
+                                            return (
+                                                <Square
+                                                    value={this.state.squares[i]}
+                                                    onClick={() => this.handleClick(i)}
+                                                />
+                                            );
+                                        }
+                                        
+                                        render() {
+                                            const status = 'Next player: X';
+                                         
+                                            return (
+                                                <div>
+                                                    <div className="status">{status}</div>
+                                                    <div className="board-row">
+                                                        {this.renderSquare(0)}
+                                                        {this.renderSquare(1)}
+                                                        {this.renderSquare(2)}
+                                                    </div>
+                                                    <div className="board-row">
+                                                        {this.renderSquare(3)}
+                                                        {this.renderSquare(4)}
+                                                        {this.renderSquare(5)}
+                                                    </div>
+                                                    <div className="board-row">
+                                                        {this.renderSquare(6)}
+                                                        {this.renderSquare(7)}
+                                                        {this.renderSquare(8)}
+                                                    </div>
+                                                </div>
+                                            );
+                                        }
+                                    }                             
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Exemple</h3>
+                        <p>
+                            La classe Board a pour but d'afficher un carré composé de 9 cellules. Chaque cellule est
+                            cliquable et cliquer sur une cellule fait apparaître un X sur celle-ci.
+                        </p>
+                        <p>
+                            La classe Board dispose de son propre state, qui contient l'état de la grille dans un
+                            tableau de 9 valeurs. Initialement, les valeurs sont toutes égales à null.
+                        </p>
+                        <p>
+                            Quand on crée la grille dans le parent, on appelle le composant enfant, Square, à qui l'on
+                            fournit 2 propriétés : la valeur qu'il doit afficher, ainsi qu'une méthode pour gérer les
+                            modifications de Square. Si Square est modifié, il appellera cette méthode qui mettra
+                            ensuite à jour l'état de Board.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Exemple</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class Square extends React.Component {
+                                        render() {
+                                            return (
+                                                <button
+                                                    className="square"
+                                                    onClick={() => this.props.onClick()}
+                                                >
+                                                    {this.props.value}
+                                                </button>
+                                            );
+                                        }
+                                    }  
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Exemple</h3>
+                        <p>
+                            Square est une classe sans état. Elle se contente d'afficher la valeur qu'elle reçoit en
+                            propriété (this.props.value) et, en cas de clic sur la cellule, appelle la fonction fournie
+                            en propriété par Board pour que Board change son propre state et mette à jour l'élément sur
+                            lequel on vient de cliquer.
+                        </p>
+                        <p>
+                            L'exemple complet va plus loin (avec notamment le fait que chaque joueur ait son symbole et
+                            une gestion de l'historique des coups joués) et se trouve ici :
+                        </p>
+                        <p>
+                            <a href="https://fr.reactjs.org/tutorial/tutorial.html"
+                                >https://fr.reactjs.org/tutorial/tutorial.html</a
+                            >
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Résumé</h3>
                         <ul>
                             <li>Les composants constituent un arbre hiérarchique, avec des parents et des enfants</li>
-                            <li>Les composants se passent des valeurs entre enfants et parents à travers les <b>props</b></li>
-                            <li>L'état de l'interface à un instant <i>t</i> (le contenu d'un champ de saisie, les données récupérées depuis le serveur, ...) est porté par le <b>state</b></li>
+                            <li>Les composants se passent des valeurs entre enfants et parents à travers les props</li>
+                            <li>
+                                Les props au sein d'un composant sont immuables par celui-ci (seul son parent peut les
+                                changer)
+                            </li>
+                            <li>
+                                L'état de l'interface à un instant t (le contenu d'un champ de saisie, les données
+                                récupérées depuis le serveur, ...) est porté par le state
+                            </li>
+                            <li>Les composants fonctions n'ont pas de state</li>
                         </ul>
-                    </section>
-                    <section>
-                        <h3>Pourquoi on met pas tout dans le state alors ?</h3>
-                        <p>Le danger du state, c'est qu'on peut le changer à tout moment. Même quand on veut pas.</p>
                     </section>
 
                     <section>
-                        <h2>Ok mais je choisis comment du coup ?</h2>
+                        <h3>Que mettre dans le state ?</h3>
+                        <p>On est en droit de se demander si on ne peut pas tout gérer dans le state.</p>
+                        <p>
+                            Le problème du state, c'est justement qu'il change, parfois trop, parfois alors qu'on ne le
+                            souhaite pas. Du coup, il est conseillé de suivre ces "règles" :
+                        </p>
                         <ul>
-                            <li>Toute donnée fournie à un composant, dont il n'est pas responsable, est portée par ses props.</li>
-                            <li><b>Le state n'est employé que pour refléter l'état d'un composant dans son interaction avec l'utilisateur.</b></li>
-                            <li>Par exemple, un composant de liste donne les données à ses enfants par des props, mais les enfants ne doivent pas modifier ces données. Ils n'en sont pas responsables.</li>
-                            <li>Au contraire, un composant avec un champ de saisie est responsable de la valeur du champ, et doit la porter dans son state.</li>
+                            <li>
+                                Toute donnée fournie à un composant, dont il n'est pas responsable, est portée par ses
+                                props.
+                            </li>
+                            <li>
+                                Le state n'est employé que pour refléter l'état d'un composant dans son interaction avec
+                                l'utilisateur.
+                            </li>
+                            <li>
+                                Par exemple, un composant de liste donne les données à ses enfants par des props, mais
+                                les enfants ne doivent pas modifier ces données. Ils n'en sont pas responsables.
+                            </li>
                         </ul>
                     </section>
-                    <section>
-                        <h2>StateLess Component</h2>
-                        <p>Avec eux, il ne faut pas hésiter ! </p>
-                        <pre>
-                            <code class="javascript">
-  const Profile = ({image, bio}) => {
-    return (
-      &lt;div>
-          <img src={image} />
-          <div>{bio}</div>
-      &lt;/div>
+                </section>
 
-    )
-  };
+                <section>
+                    <section>
+                        <h1>- Créer un composant -</h1>
+                    </section>
+
+                    <section>
+                        <h3>Introduction</h3>
+                        <p>
+                            Il existe plusieurs syntaxes pour définir un composant dans React, dépendant du composant
+                            lui-même et de la syntaxe JS utilisée. Selon l'ancienneté du projet sur lequel vous serez
+                            amenés à travailler, il est possible de rencontrer chacune de ces syntaxes.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>React.createClass</h3>
+                        <p>La plus ancienne façon de créer des composants React.</p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    import React from "react";
+                                     
+                                    const Contact = React.createClass({
+                                        render() {
+                                            return (
+                                                <div>{this.props.name}</div>
+                                            );
+                                        }
+                                    });
+                                     
+                                    export default Contact;
+                                </script>
                             </code>
                         </pre>
                     </section>
+
                     <section>
-                        <h2>Petit récapitulatif</h2>
+                        <h3>React.Component</h3>
+                        <p>En utilisant la syntaxe ES6 et la création de classe, on a :</p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    import React, { Component } from 'react';
+                                     
+                                    class Contact extends Component {
+                                        constructor(props) {
+                                            super(props);
+                                        }
+
+                                        render() {
+                                            return (
+                                                <div>{this.props.name}</div>
+                                            );
+                                        }
+                                    }
+                                     
+                                    export default Contact;
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>React.PureComponent</h3>
+                        <p>
+                            <strong>React.PureComponent</strong> est similaire à <strong>React.PureComponent</strong>, à
+                            ceci près que <strong>React.PureComponent</strong> n'implémente pas
+                            <strong>shouldComponentUpdate()</strong>.
+                        </p>
+                        <p>
+                            A la place, une comparaison de surface de l'état et des propriétés est faite pour savoir
+                            s'il est nécessaire de rendre le composant à nouveau, ce qui peut mener à des faux négatifs.
+                        </p>
+                        <p>
+                            <strong>React.PureComponent</strong> est à utiliser pour des composants simples dont le
+                            rendu pour des props données est toujours identique. Dans ce cas, il est possible d'avoir
+                            des gains de performance.
+                        </p>
+                        <p><strong>PureComponent</strong> n'est disponible que pour les versions de React >= 15.3.</p>
+                    </section>
+
+                    <section>
+                        <h3>Composant fonction</h3>
+                        <p>
+                            Quand il s'agit d'un composant très simple : dans le cas de composants simples, on peut
+                            créer des composants fonction:
+                        </p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    function Contact(props) {
+                                        return (
+                                            <div>{props.name}</div>
+                                        );
+                                    }
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Utilisation</h3>
+                        <p>Dans tous les cas, le composant s'utilisera sous la forme :</p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    <Contact name="nom" />
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Dans quel cas utiliser chaque syntaxe ?</h3>
+                        <p>React.createClass n'est à utiliser que dans le cas où l'on a besoin de mixins.</p>
+                        <p>
+                            Si on n'a pas besoin de state ou de fonctions du cycle de vie, les fonctions sont à
+                            utiliser.
+                        </p>
+                        <p>
+                            Si jamais on a des props immuables, besoin de state ou de fonctions du cycle de vie, et
+                            qu'on souhaite avoir un gain de performance, alors on pourra utiliser React.PureComponent
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Dans quel cas utiliser chaque syntaxe ?</h3>
+                        <p>
+                            Par défaut, si on a besoin de state ou des fonctions du cycle de vie React, on utilisera
+                            React.Component.
+                        </p>
+                        <p>
+                            A noter, l'ajout des hooks (détaillés dans les ajouts de React 16) permet d'utiliser des
+                            équivalents du state ou des fonctions du cycle de vie dans des fonctions. Si les hooks sont
+                            utilisés sur le projet, on utilisera des fonctions avec des hooks.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Mixins</h3>
+                        <p style="color: pink">Pour commencer, les mixins sont déconseillés.</p>
+                        <p>Ce n'est pas moi qui le dis, c'est React:</p>
+                        <p>
+                            <a hre="https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html"
+                                >https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html</a
+                            >
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>- Question 1 -</h1>
+                    </section>
+
+                    <section>
+                        <h3>Sélectionnez la ou les bonnes réponses</h3>
+
+                        <ol>
+                            <li>
+                                au sein d'un composant, le state est immuable, les props sont immuables (par le
+                                composant lui-même)
+                            </li>
+                            <li>je ne sais pas (ceci n'est pas une bonne réponse)</li>
+                            <li>
+                                au sein d'un composant, le state est muable, les props sont immuables (par le composant
+                                lui-même)
+                            </li>
+                            <li>
+                                au sein d'un composant, le state est immuable, les props sont muables (par le composant
+                                lui-même)
+                            </li>
+                            <li>
+                                au sein d'un composant, le state est muable, les props sont muables (par le composant
+                                lui-même)
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section style="position: relative">
+                        <h3>Sélectionnez la ou les bonnes réponses</h3>
+
+                        <ol>
+                            <li>
+                                au sein d'un composant, le state est immuable, les props sont immuables (par le
+                                composant lui-même)
+                            </li>
+                            <li>je ne sais pas (ceci n'est pas une bonne réponse)</li>
+                            <li>
+                                au sein d'un composant, le state est muable, les props sont immuables (par le composant
+                                lui-même)
+                            </li>
+                            <li style="color: greenyellow">
+                                au sein d'un composant, le state est immuable, les props sont muables (par le composant
+                                lui-même)
+                            </li>
+                            <li>
+                                au sein d'un composant, le state est muable, les props sont muables (par le composant
+                                lui-même)
+                            </li>
+                        </ol>
+
+                        <div
+                            style="
+                                position: absolute;
+                                bottom: 10px;
+                                right: 10px;
+                                font-size: 0.6em;
+                                background-color: green;
+                                color: white;
+                                width: 50%;
+                                padding: 10px;
+                                border-radius: 10px;
+                            "
+                        >
+                            Les props sont fournies par le parent, et en tant que telles, sont immuables par le
+                            composant lui-même. Seul son parent peut les changer. Pour gérer tout l'aspect muable du
+                            composant, on utilise le state dans lequel on stockera nos variables et leurs changements.
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Exercice 1</h1>
+                    </section>
+
+                    <section>
+                        <h3>Premiers comosants</h3>
+                        <ol>
+                            <li>Installer node.js (LTS) <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+                            <li>
+                                Installer create-react-app : <span style="color: pink">npm i –g create-react-app</span>
+                            </li>
+                            <li>
+                                Installer vscode
+                                <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a> (plugins:
+                                auto close tag, auto rename tag, eslint, prettier)
+                            </li>
+                            <li>Créer un projet : <span style="color: pink">npx create-react-app todo-app</span></li>
+                            <li>Faire une appli qui présente une liste de todo statiques</li>
+                        </ol>
+                        <p>
+                            <strong>~ 1h ~</strong>
+                        </p>
+                        <img src="/img/exercice1.png" alt="todos" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>React</h1>
+                        <h2>- Cycle de vie React -</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Cycle de vie</h1>
+                    </section>
+
+                    <section>
+                        <h3>Introduction</h3>
+                        <img src="/img/lifecycle.png" alt="react lifecycle" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Le montage du composant</h1>
+                    </section>
+
+                    <section>
+                        <h3>Cycle de vie</h3>
+                        <p>
+                            Lors de l'instanciation d'un composant, 5 méthodes peuvent être appelées consécutivement :
+                        </p>
+                        <img src="/img/lifecycle_mount.png" alt="react lifecyle mount" />
+                    </section>
+
+                    <section>
+                        <h3>defaultProps</h3>
+                        <p>
+                            Les propriétés par défaut fournies au composant le sont par l'intermédiaire de la propriété
+                            defaultProps à utiliser après la définition de la classe.
+                        </p>
+                        <p>
+                            Le state n'existe pas encore lors de l'appel de getDefaultProps(), il est donc impossible de
+                            faire appel à this.setState().
+                        </p>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class Greeting extends React.Component {
+                                        // ...
+                                    }
+                                     
+                                    Greeting.defaultProps = {
+                                        name: 'Mary'
+                                    };            
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>constructor()</h3>
+                        <p>
+                            Le constructeur de la classe. Les composants héritant de <strong>React.Component</strong>,
+                            il est nécessaire d'appeler super(props) avant toute autre déclaration.
+                        </p>
+                        <p>
+                            Si cela n'est pas fait, <strong>this.props</strong> n'existe pas et cela peut mener à des
+                            anomalies.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>constructor()</h3>
+                        <p>Le but du constructeur est :</p>
                         <ul>
-                            <li>Avec des mixins, et un cycle de vie ==> React.CreateClass</li>
-                            <li>Sans mixins mais avec un cycle de vie ==> class ... extends Component</li>
-                            <li>Sans mixins et sans cylce de vie ==> Pures Fonctions</li>
+                            <li>d'initialiser le state</li>
+                            <li>de lier des gestionnaires d'événements à l'instance</li>
+                            <li>
+                                Il ne faut pas appeler <strong>this.setState()</strong> dans le constructeur : le
+                                constructeur défini le state en allouant une valeur directement à
+                                <strong>this.state</strong>.
+                            </li>
                         </ul>
+                        <p>
+                            C'est le seul endroit où il est possible d'allouer une valeur directement à
+                            <strong>this.state</strong>. Ailleurs, la manipulation du state se fait nécessairement à
+                            l'aide de <strong>this.setState()</strong>.
+                        </p>
                     </section>
-					                    <section>
-                        <h2>React.createClass</h2>
-                        <p>Pour les mixins !!!</p>
+
+                    <section>
+                        <h3>constructor()</h3>
                         <pre>
-                            <code class="javascript">
-const Hello = React.createClass({
-  mixins: [firstMixin, secondMixin],
-  getInitialState() {
-    return {
-      hello: "world"
-    };
-  },
-  componentWillReceiveProps(nextProps){
-	console.log(this.props); 
-	console.log(nextProps);
-  },
-  handleInputChange({target: {value}) {
-    this.setState({
-      hello: value
-    });
-  },
-  render() {
-	const {hello} = this.state;
-    return (
-      &lt;div>
-        &lt;input value={hello} onChange={this.handleInputChange} />
-        &lt;div>hello {hello}</div>
-      &lt;/div>
-    );
-  }
-});
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class Counter extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                            this.state = {count: props.initialCount};
+                                            this.handleClick = this.handleClick.bind(this);
+                                        }
+                                        // ...
+                                    }
+                                                                            
+                                </script>
                             </code>
                         </pre>
                     </section>
-					                    <section>
-                        <h2>Class ES6</h2>
-                        <p>extends Component (voir le PureComponent)</p>
-                        <pre>
-                            <code class="javascript">
-class TodoItem extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      editing: false
-    };
-  }
 
-  handleDoubleClick() {
-    this.setState({ editing: true });
-  }
-  render (){
-	const {editing} = this.state;
-	return (
-		&lt;div>Un composant qui a un état : {editing}</div>
-	)
-  }
-}
+                    <section>
+                        <h3>static getDerivedStateFromProps(props, state)</h3>
+                        <p>
+                            Cette méthode est appelée juste avant le rendu du composant. Elle doit renvoyer soit un
+                            objet qui mette à jour l'état, soit null.
+                        </p>
+                        <p>Cette méthode existe pour les rares cas où le state dépend des props reçues.</p>
+                        <p>Cette méthode est n'a pas accès à l'instance de composant (this).</p>
+                    </section>
+
+                    <section>
+                        <h3>render()</h3>
+                        <p>Effectue le rendu de la page en utilisant les props et le state.</p>
+                        <p>
+                            this.setState() causant souvent un re-rendu, l'appeler dans render() peut créer une boucle
+                            infinie. Il est donc interdit d'appeler this.setState() dans render().
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>componentDidMount</h3>
+                        <p>
+                            Une fois le composant monté, il est possible de lancer les chargements des données si
+                            nécessaire et de s'abonner à des listeners pour recevoir les données mises à jour. Cette
+                            méthode est la première permettant de faire appel aux éléments du DOM (si par exemple des
+                            tailles d'éléments sont à prendre en compte).
+                        </p>
+                        <p>N'oubliez pas de vous désabonner dans componentWillUnmount().</p>
+                        <p>
+                            Il est possible d'appeler this.setState() immédiatement ce qui déclenchera un nouveau rendu
+                            qui aura lieu avant que l'écran ne soit rafraîchi par le navigateur. Cela garanti que l'état
+                            intermédiaire ne sera pas visible malgré l'appel consécutifs de 2 render().
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Le cycle de mises çà jour du composant</h1>
+                    </section>
+
+                    <section>
+                        <h3>componentDidMount()</h3>
+                        <p>
+                            Le composant étant dorénavant monté, il entre maintenant dans un cycle qui le tiendra à jour
+                            en fonction des changements, soit des props qu'il reçoit, soit de son propre state.
+                        </p>
+                        <img src="/img/lifecycle_did_mount.png" alt="component did mount" />
+                    </section>
+
+                    <section>
+                        <h3>static getDerivedStateFromProps(props, state)</h3>
+                        <p>
+                            Cette méthode est appelée juste avant le rendu du composant. Elle doit renvoyer soit un
+                            objet qui mette à jour l'état, soit null.
+                        </p>
+                        <p>Cette méthode existe pour les rares cas où le state dépend des props reçues.</p>
+                        <p>Cette méthode est n'a pas accès à l'instance de composant (this).</p>
+                    </section>
+
+                    <section>
+                        <h3>shouldComponentUpdate(nextProps, nextState)</h3>
+                        <p>
+                            Permet de définir si oui ou non le rendu du composant est concerné par le changement des
+                            state ou des props. Si la réponse est true, un nouveau <srong>render()</srong> sera appelé.
+                            Si false, aucun rendu supplémentaire ne sera invoqué.
+                        </p>
+                        <p>Cette méthode n'est pas appelée dans le cas où <strong>forceUpdate()</strong> est appelé.</p>
+                    </section>
+
+                    <section>
+                        <h3>shouldComponentUpdate(nextProps, nextState)</h3>
+                        <p>
+                            Le but de cette méthode est d'améliorer les performances, cependant utiliser cette méthode
+                            pour empêcher des rendus peut causer des problèmes. Faire des comparaisons complètes des
+                            objets dans les anciens et nouveaux state, et dans les anciennes et nouvelles props peut
+                            causer des problèmes de performance.
+                        </p>
+                        <p>
+                            Utiliser <strong>this.setState()</strong> dans cette fonction eut résulter en une boucle
+                            infinie, il est donc interdit d'utiliser <strong>this.setState()</strong> dans cette
+                            fonction.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>render()</h3>
+                        <p>Effectue le rendu de la page en utilisant les nouvelles props et le nouveau state.</p>
+                        <p>
+                            <strong>this.setState()</strong> causant souvent un re-rendu, l'appeler dans
+                            <strong>render()</strong> peut créer une boucle infinie. Il est donc interdit d'appeler
+                            <strong>this.setState()</strong> dans <strong>render()</strong>.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>vgetSnapshotBeforeUpdate(prevProps, prevState)</h3>
+                        <p>Est appelé juste avant que le rendu le plus récent ne soit validé.</p>
+                        <p>
+                            Elle permet par exemple de récupérer les informations du DOM avant leur modification. Toute
+                            valeur retournée par cette méthode sera fournie en troisième paramètre à
+                            <strong>componentDidUpdate()</strong>.
+                        </p>
+                        <p>Il faut soit renvoyer les valeurs capturées, soit null.</p>
+                    </section>
+
+                    <section>
+                        <h3>componentDidUpdate(prevProps, prevState, snapshot)</h3>
+                        <p>
+                            Cette méthode est appelée juste après la mise à jour du composant. Elle permet notamment de
+                            pouvoir récupérer les propriétés du DOM mis à jour (positions, taille, etc.) et d'effectuer
+                            des appels réseau au besoin si un changement de propriété / d'état le nécessite.
+                            L'utilisation du snapshot permet de gérer les changements relatifs au DOM.
+                        </p>
+                        <p>
+                            Il est possible d'appeler this.setState() mais il est conseillé de soumettre cet appel à des
+                            conditions (changement d'une prop précise, ou d'une variable du state précise) sous peine de
+                            déclencher une boucle de re-rendus.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Le cycle de mise à jour du composant</h3>
+                        <p>Chaque changement de state, ou chaque changement de prop lancera à nouveau ce cycle.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Le démontage du composant</h1>
+                    </section>
+
+                    <section>
+                        <h3>Présentation</h3>
+                        <p>Une fois que la page est quittée, le composant est démonté.</p>
+                        <img src="/img/lifecycle_unmount.png" alt="react component unmount" />
+                        <p>
+                            Est appelé immédiatement avant le démontage et la destruction du composant. Tout nettoyage
+                            est à faire dans cette méthode : suppression de timers, arrêt de requêtes réseau,
+                            désabonnements.
+                        </p>
+                        <p>
+                            Puisqu'aucun autre rendu n'aura lieu, il est interdit d'utiliser
+                            <strong>this.setState()</strong>.
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Question 2</h1>
+                    </section>
+
+                    <section>
+                        <h3>Le cycle de mise à jour du composant est appelé :</h3>
+                        <p>Sélectionnez la ou les bonnes réponses</p>
+                        <ol>
+                            <li>Quand une prop fournie par le parent change</li>
+                            <li>Quand le state du composant change</li>
+                            <li>Quand on rafraîchit la page</li>
+                            <li>Quand je redimensionne la page</li>
+                        </ol>
+                    </section>
+
+                    <section style="position: relative">
+                        <h3>Le cycle de mise à jour du composant est appelé :</h3>
+                        <p>Sélectionnez la ou les bonnes réponses</p>
+                        <ol>
+                            <li style="color: greenyellow">Quand une prop fournie par le parent change</li>
+                            <li style="color: greenyellow">Quand le state du composant change</li>
+                            <li>Quand on rafraîchit la page</li>
+                            <li>Quand je redimensionne la page</li>
+                        </ol>
+                        <div
+                            style="
+                                position: absolute;
+                                bottom: 10px;
+                                right: 10px;
+                                font-size: 0.6em;
+                                background-color: green;
+                                color: white;
+                                width: 50%;
+                                padding: 10px;
+                                border-radius: 10px;
+                            "
+                        >
+                            A moins d'avoir mis un listener mettant à jour le state au redimensionnement de la page,
+                            seuls les changements de state ou de prop lancent un cycle de mise à jour du composant.
+                        </div>
+                    </section>
+
+                    <section>
+                        <section>
+                            <h1>> Exercice 2</h1>
+                        </section>
+
+                        <section>
+                            <h3>Ajouter du state</h3>
+                            <ol>
+                                <li>Pouvoir cocher/décocher un Todo</li>
+                                <li>Ajouter un input pour créer un nouveau Todo</li>
+                                <li>Ajouter un boutton de supression de Todo</li>
+                            </ol>
+                            <p>
+                                <strong> ~ 1h ~ </strong>
+                            </p>
+                            <img src="/img/exercice2.png" alt="" />
+                        </section>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>React</h1>
+                        <h2>- React 16+ -</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Introduction</h1>
+                    </section>
+
+                    <section>
+                        <h3>Présentation</h3>
+                        <p>
+                            Dans sa version 16+ React a entamé une révolution du framework pour répondre aux plus grands
+                            besoins.
+                        </p>
+                        <p>
+                            Cela a commencé par un nouveau moteur interne à React ainsi que de nouvelles méthodes de
+                            cycles de vies (présentées dans cette formation). React 16 a aussi été la première version
+                            sans les historiques React.createClass et Mixins.
+                        </p>
+                        <p>
+                            Le plus gros apport de React a été amené dans la version 16.8 et sont les Hooks. Le but est
+                            de simplifier la déclaration de composants ainsi que les ré-usabilité des comportements
+                            écrits.
+                        </p>
+                        <p>
+                            On trouvera aussi d’autres nouveautés comme : Fragment, Suspense, Portals, ErrorBoundaries
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Fragment</h1>
+                    </section>
+
+                    <section>
+                        <h3>Fragment</h3>
+                        <p>
+                            React a toujours imposé la limitation d’un nœud principal retourné par composant. Cela a
+                            donné lieu dans de nombreux cas à beaucoup de « div » fantômes qui sont présentent dans le
+                            DOM.
+                        </p>
+                        <p>
+                            Le but de <a href="https://fr.reactjs.org/docs/fragments.html">Fragment</a> est de résoudre
+                            ce problème.
+                        </p>
+                        <p>Une utilisation courante sera notamment avec les tableaux</p>
+                    </section>
+
+                    <section>
+                        <h3>Fragment (exemple)</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    render() {
+                                        return (
+                                            <React.Fragment key={i}>
+                                                <ChildA />
+                                                <ChildB />
+                                                <ChildC />
+                                            </React.Fragment>
+                                        );
+                                    }
+                                                                            
+                                </script>
                             </code>
                         </pre>
+                        <p>La notation complexe permet d'ajouter une prop <strong>key</strong></p>
                     </section>
-					                    <section>
-                        <h2>StateLess Component</h2>
-                        <p>Avec eux, il ne faut pas hésiter ! </p>
+
+                    <section>
+                        <h3>Fragment (exemple)</h3>
                         <pre>
-                            <code class="javascript">
-const Personne = () => {
-    return (
-      &lt;Profile nom={'Silvio'} bio={'BlaBlaBlaBlaBlaBlaBla'}/>
-
-    )
-  };					
-							
-  const Profile = ({nom, bio}) => {
-    return (
-      &lt;div>
-          <span>nom</span>
-          <div>{bio}</div>
-      &lt;/div>
-
-    )
-  };
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class Columns extends React.Component {
+                                        render() {
+                                            return (
+                                                <>
+                                                    <td>Hello</td>
+                                                    <td>World</td>
+                                                </>
+                                            );
+                                        }
+                                    }                                      
+                                </script>
                             </code>
                         </pre>
                     </section>
                 </section>
-                <section data-background='wall3.jpg'>
+
+                <section>
                     <section>
-                        <h1>Le cycle de vie d'un composant</h1>
+                        <h1>> Hooks</h1>
                     </section>
+
                     <section>
-                        <img src='lifecycle.png'/>
+                        <h3>Hooks</h3>
+                        <p>
+                            <a href="https://fr.reactjs.org/docs/hooks-intro.html">Hooks</a> est la dernière nouveauté
+                            de React. L’idée est de pouvoir utiliser les comportements de cycle de vie ainsi que le
+                            state dans des composants fonctions (ces derniers n’étaient auparavant disponible que pour
+                            les composant de type class).
+                        </p>
+                        <p>
+                            Un des principaux bénéfices est de pouvoir créer simplement des hooks customs qui sont
+                            parfaitement isolés les uns des autres. Cela permet aussi de partager très simplement ces
+                            derniers.
+                        </p>
+                        <p>
+                            Les hooks vous permettent de découper un composant en petites fonctions basées sur les
+                            parties qui sont intrasèquement liées (comme la configuration d’un abonnement ou le
+                            changement de données).
+                        </p>
                     </section>
-                </section>
-                <section data-background='wall2.jpg'>
+
                     <section>
-                        <h1>Il s'agit de créer une todo list !</h1>
-                   </section>
-                    <section>
-                        <h2>On veut obtenir quoi ?</h2>
+                        <h3>Hooks</h3>
                         <ul>
-                            <li>Une appli écrite en React pur</li>
-                            <li>Avoir une liste de choses à faire</li>
-                            <li>Pouvoir ajouter des choses à faire</li>
-                            <li>Pouvoir supprimer des choses à faire</li>
-                            <li>Pouvoir filtrer par choses à faire faits ou pas faits</li>
+                            <li>
+                                <a href="https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889"
+                                    >https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://wattenberger.com/blog/react-hooks"
+                                    >https://wattenberger.com/blog/react-hooks</a
+                                >
+                            </li>
                         </ul>
                     </section>
+                </section>
+
+                <section>
                     <section>
-                        <h1>On y va !</h1>
-                        <a href='http://bit.ly/1ZESLJK' target='blank' style="color: cyan">http://bit.ly/1ZESLJK</a>
-                        <a href='https://github.com/tastejs/todomvc-app-template/blob/master/index.html' target='blanck' style="color: grey">La spec</a>
+                        <h1>React</h1>
+                        <h2>- Faire sont app -</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Introduction</h1>
+                    </section>
+
+                    <section>
+                        <h3>Introduction</h3>
+                        <p>
+                            Il va maintenant être temps de mettre le tout en jeu pour créer une application complète :
+                        </p>
+                        <ul>
+                            <li>Layout d’application</li>
+                            <li>Routage entre les pages</li>
+                            <li>Appeler le serveur</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Layout</h1>
+                    </section>
+
+                    <section>
+                        <h3>Layout</h3>
+                        <p>Proposition de librairie :</p>
+                        <p><a href="https://material-ui.com/fr/">https://material-ui.com/fr/</a></p>
+                        <img src="/img/layout.png" alt="Layout" />
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Routing</h1>
+                    </section>
+
+                    <section>
+                        <h3>Routing</h3>
+                        <p>Proposition de librairie :</p>
+                        <p>
+                            <a href="https://reacttraining.com/react-router/web/guides/quick-start"
+                                >https://reacttraining.com/react-router/web/guides/quick-start</a
+                            >
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Appeler le serveur</h1>
+                    </section>
+
+                    <section>
+                        <h3>Appeler le serveur</h3>
+                        <p>Utilisation de fetch :</p>
+                        <p>
+                            <a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API"
+                                >https://developer.mozilla.org/fr/docs/Web/API/Fetch_API</a
+                            >
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>> Les composants d’ordre supérieur (HOC)</h1>
+                    </section>
+
+                    <section>
+                        <h3>Introduction</h3>
+                        <p>
+                            Les composants d'ordre supérieur sont des fonctions acceptant un composant et en renvoyant
+                            un nouveau augmenté de nouvelles méthodes.
+                        </p>
+                        <p>Prenons à nouveau les exemples fournis par React pour en comprendre le fonctionnement :</p>
+                    </section>
+
+                    <section>
+                        <h3>CommentList</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class CommentList extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                            this.handleChange = this.handleChange.bind(this);
+                                            this.state = {
+                                                // `DataSource` est une source de données quelconque
+                                                comments: DataSource.getComments()
+                                            };
+                                        }
+                                       
+                                        componentDidMount() {
+                                            // On s’abonne aux modifications
+                                            DataSource.addChangeListener(this.handleChange);
+                                        }
+                                       
+                                        componentWillUnmount() {
+                                            // On se désabonne
+                                            DataSource.removeChangeListener(this.handleChange);
+                                        }
+                                        
+                                        handleChange() {
+                                            // Met à jour l’état local quand la source de données est modifiée
+                                            this.setState({
+                                               comments: DataSource.getComments()
+                                            });
+                                        }
+                                         
+                                        render() {
+                                            return (
+                                                <div>
+                                                    {this.state.comments.map((comment) => (
+                                                        <Comment comment={comment} key={comment.id} />
+                                                    ))}
+                                                </div>
+                                            );
+                                        }
+                                    }
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>BlogPost</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    class BlogPost extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                            this.handleChange = this.handleChange.bind(this);
+                                            this.state = {
+                                                blogPost: DataSource.getBlogPost(props.id)
+                                            };
+                                        }
+                                         
+                                        componentDidMount() {
+                                            DataSource.addChangeListener(this.handleChange);
+                                        }
+                                         
+                                        componentWillUnmount() {
+                                            DataSource.removeChangeListener(this.handleChange);
+                                        }
+
+                                        handleChange() {
+                                            this.setState({
+                                                blogPost: DataSource.getBlogPost(this.props.id)
+                                            });
+                                        }
+                                         
+                                        render() {
+                                            return <TextBlock text={this.state.blogPost} />;
+                                        }
+                                    }
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Explications</h3>
+                        <p>Ces deux composants ne sont pas identiques, mais partagent un même fonctionnement :</p>
+                        <ul>
+                            <li>au montage, ils ajoutent un listener vers Datasource</li>
+                            <li>ce listener effectue un setState lors d'une modification</li>
+                            <li>au démontage, le listener est retiré</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Explications</h3>
+                        <p>
+                            On va donc faire en sorte de simplifier les composants à leur plus simple expression, le
+                            rendu, et créer un composant d'ordre supérieur pour ajouter toute la gestion du listener.
+                        </p>
+                        <p>
+                            Le composant d'ordre supérieur, appelé ici withSubscription, prend en entrée le composant de
+                            rendu, et une fonction de sélection de la source que l'on souhaite utiliser (puisque seule
+                            cette source diffère dans le fonctionnement décrit ci-dessus).
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>Decorateur</h3>
+                        <pre>
+                            <code class="hljs" data-trim>
+                                <script type="text/template">
+                                    // Cette fonction accepte un composant...
+                                    function withSubscription(WrappedComponent, selectData) {
+                                        // ... et renvoie un autre composant...
+                                        return class Decorated extends React.Component {
+                                            constructor(props) {
+                                                super(props);
+                                                this.handleChange = this.handleChange.bind(this);
+                                                this.state = {
+                                                    data: selectData(DataSource, props)
+                                                };
+                                            }
+                                         
+                                            componentDidMount() {
+                                                // ... qui s’occupe de l'abonnement...
+                                                DataSource.addChangeListener(this.handleChange);
+                                            }
+                                         
+                                            componentWillUnmount() {
+                                                DataSource.removeChangeListener(this.handleChange);
+                                            }
+
+                                            handleChange() {
+                                                this.setState({
+                                                    data: selectData(DataSource, this.props)
+                                                });
+                                            }
+                                             
+                                            render() {
+                                                // ... et affiche le composant enrobé avec les données à jour !
+                                                // Remarquez qu’on passe aussi toute autre prop reçue.
+                                                return <WrappedComponent data={this.state.data} {...this.props} />;
+                                            }
+                                        };
+                                    }
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>Explications</h3>
+                        <p>
+                            Cette fonction prend le composant WrappedComponent fourni en paramètre, l'agrémente des
+                            fonctions de montage, de la mise à jour du state au changement, et du démontage en utilisant
+                            la source fournie en second paramètre.
+                        </p>
+                        <p>Nos composants simplifiés à leur seul rendu deviennent alors :</p>
+                    </section>
+
+                    <section>
+                        <h3>CommentList (simplifiée)</h3>
+                        <pre>
+                            <code class="hljs" data-trim data-line-numbers="1-16|18-22">
+                                <script type="text/template">
+                                    // Composant pur
+                                    class CommentList extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                        }
+                                       
+                                        render() {
+                                            return (
+                                                <div>
+                                                    {this.props.data.map((comment) => (
+                                                        <Comment comment={comment} key={comment.id} />
+                                                    ))}
+                                                </div>
+                                            );
+                                        }
+                                    }
+                                     
+                                    // Augmentation par le HOC
+                                    const CommentListWithSubscription = withSubscription(
+                                        CommentList,
+                                        (DataSource) => DataSource.getComments()
+                                    );
+                                </script>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h3>BlogPost (simplifié)</h3>
+                        <pre>
+                            <code class="hljs" data-trim data-line-numbers="1-10|12-16">
+                                <script type="text/template">
+                                    // Componsant pur
+                                    class BlogPost extends React.Component {
+                                        constructor(props) {
+                                            super(props);
+                                        }
+                                       
+                                        render() {
+                                            return <TextBlock text={this.props.data} />;
+                                        }
+                                    }
+                                       
+                                    // Augmentation par le HOC
+                                    const BlogPostWithSubscription = withSubscription(
+                                        BlogPost,
+                                        (DataSource, props) => DataSource.getBlogPost(props.id)
+                                    );
+                                </script>
+                            </code>
+                        </pre>
                     </section>
                 </section>
             </div>
         </div>
 
-        <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
-        <script src="node_modules/reveal.js/js/reveal.js"></script>
-
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
         <script>
-        // Correction https://jsbin.com/kipixumuxi/6/edit?js,output
-        // Full list of configuration options available at:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            viewDistance: 3,
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
 
-            // Optional reveal.js plugins
-            dependencies: [
-                { src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true }
-            ]
-        });
-
-        </script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-70256271-2', 'auto');
-          ga('send', 'pageview');
-
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+            });
         </script>
     </body>
-    </html>
+</html>
